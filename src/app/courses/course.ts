@@ -7,4 +7,5 @@ export class Course{
     duration: number | undefined;
     rating: number =0;
     releaseDate: string | undefined;
+    description: string | undefined;
 }
