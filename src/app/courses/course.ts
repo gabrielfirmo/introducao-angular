@@ -3,7 +3,7 @@ export class Course{
     name:string | undefined;
     imageUrl: string | undefined;
     price: number | undefined;
-    code: string | undefined;
+    code!: string;
     duration: number | undefined;
     rating: number =0;
     releaseDate: string | undefined;
