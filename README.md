@@ -18,5 +18,9 @@ Por fim, para executar a aplicação, execute o comando:
 ```shell
 ng serve
 ```
-A aplicação será iniciada em `http://localhost:4200`.
+A aplicação será iniciada em `http://localhost:4200`. O resultado esperado é mostrado abaixo.
+
+
+
+![alt text](https://user-images.githubusercontent.com/48038742/112031927-9fb85380-8b1a-11eb-84d9-0b6df30ef904.png)
 
