@@ -14,16 +14,26 @@ export class CourseListComponent implements OnInit{
     ngOnInit(): void{
         this.retrieveAll();
     }
-retrieveAll(): void{
-    this.courseService.retrieveAll().subscribe({
-        next: courses =>{
-            this._courses = courses;
-            this.filteredCourses = this._courses;
-        },
-        error: err => console.log('Error',err)
-    })
-        
-}
+    retrieveAll(): void{
+        this.courseService.retrieveAll().subscribe({
+            next: courses =>{
+                this._courses = courses;
+                this.filteredCourses = this._courses;
+            },
+            error: err => console.log('Error',err)
+        })
+            
+    }
+    
+    deleteById(courseId:number): void{
+        this.courseService.deleteById(courseId).subscribe({
+            next: () => {
+                console.log('Deleted with success');
+                this.retrieveAll();
+            },
+            error: err => console.log('Error', err)
+        })
+    }
 
     set filter(value: string){
         this._filterBy = value;
